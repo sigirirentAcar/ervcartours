@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet | LankaDrive</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-slate-50 relative overflow-x-hidden">
+
+    <!-- Mobile Header -->
+    <header class="md:hidden flex justify-between items-center p-6 glass sticky top-0 z-40">
+        <h1 class="text-2xl font-bold text-gradient">LankaDrive</h1>
+        <button id="menu-btn" class="text-3xl text-white">
+            <i class="ph ph-list"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar fixed inset-y-0 left-0 w-64 glass shadow-2xl transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-50 border-r border-slate-700/50">
+        <div class="flex justify-between items-center p-6 md:justify-center border-b border-slate-700/50">
+            <h1 class="text-3xl font-extrabold text-gradient tracking-wider">LankaDrive</h1>
+            <button id="close-btn" class="md:hidden text-2xl text-slate-300 hover:text-white">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <ul class="flex flex-col mt-8 space-y-2 px-4">
+            <li>
+                <a href="index.html" class="flex items-center space-x-3 p-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                    <i class="ph ph-house text-xl"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="fleet.html" class="flex items-center space-x-3 p-3 rounded-lg bg-primary/20 text-primary font-semibold transition-colors">
+                    <i class="ph ph-car-profile text-xl"></i>
+                    <span>Our Fleet</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="flex items-center space-x-3 p-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                    <i class="ph ph-info text-xl"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="flex items-center space-x-3 p-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                    <i class="ph ph-phone text-xl"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="md:ml-64 min-h-screen pt-12 md:pt-24 pb-24 px-6 max-w-7xl mx-auto">
+        
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-5xl font-extrabold text-white mb-4">Our <span class="text-gradient">Premium Fleet</span></h2>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg">Choose from our wide range of meticulously maintained vehicles, designed to offer comfort and style for any journey.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12 fade-in">
+            <button class="px-6 py-2 rounded-full bg-primary text-white font-semibold shadow-lg">All Cars</button>
+            <button class="px-6 py-2 rounded-full glass hover:bg-slate-800 text-slate-300 font-semibold transition-colors">Luxury</button>
+            <button class="px-6 py-2 rounded-full glass hover:bg-slate-800 text-slate-300 font-semibold transition-colors">SUV</button>
+            <button class="px-6 py-2 rounded-full glass hover:bg-slate-800 text-slate-300 font-semibold transition-colors">Sports</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Car Card 1 -->
+            <div class="card glass rounded-2xl overflow-hidden hover-scale fade-in group">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nissan Primera" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Premium</div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-1">Nissan Primera P12</h4>
+                            <p class="text-slate-400 text-sm">Luxury Sedan</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-primary">Rs. 8,000</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="block w-full text-center py-3 rounded-lg bg-primary hover:bg-blue-600 text-white font-semibold transition-colors">Rent Now</a>
+                </div>
+            </div>
+
+            <!-- Car Card 2 -->
+            <div class="card glass rounded-2xl overflow-hidden hover-scale fade-in group">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Range Rover Velar" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Executive</div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-1">Range Rover Velar</h4>
+                            <p class="text-slate-400 text-sm">Premium SUV</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-primary">Rs. 25,000</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="block w-full text-center py-3 rounded-lg bg-primary hover:bg-blue-600 text-white font-semibold transition-colors">Rent Now</a>
+                </div>
+            </div>
+
+            <!-- Car Card 3 -->
+            <div class="card glass rounded-2xl overflow-hidden hover-scale fade-in group">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sports Coupe" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Sport</div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-1">Chevrolet Corvette</h4>
+                            <p class="text-slate-400 text-sm">Sports Coupe</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-primary">Rs. 35,000</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="block w-full text-center py-3 rounded-lg bg-primary hover:bg-blue-600 text-white font-semibold transition-colors">Rent Now</a>
+                </div>
+            </div>
+            
+            <!-- Car Card 4 -->
+            <div class="card glass rounded-2xl overflow-hidden hover-scale fade-in group">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="BMW" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Luxury</div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white mb-1">BMW M4 Competition</h4>
+                            <p class="text-slate-400 text-sm">Luxury Sports Sedan</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-primary">Rs. 28,000</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="block w-full text-center py-3 rounded-lg bg-primary hover:bg-blue-600 text-white font-semibold transition-colors">Rent Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

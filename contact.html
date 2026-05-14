@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | LankaDrive</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-slate-50 relative overflow-x-hidden">
+
+    <!-- Mobile Header -->
+    <header class="md:hidden flex justify-between items-center p-6 glass sticky top-0 z-40">
+        <h1 class="text-2xl font-bold text-gradient">LankaDrive</h1>
+        <button id="menu-btn" class="text-3xl text-white">
+            <i class="ph ph-list"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar fixed inset-y-0 left-0 w-64 glass shadow-2xl transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-50 border-r border-slate-700/50">
+        <div class="flex justify-between items-center p-6 md:justify-center border-b border-slate-700/50">
+            <h1 class="text-3xl font-extrabold text-gradient tracking-wider">LankaDrive</h1>
+            <button id="close-btn" class="md:hidden text-2xl text-slate-300 hover:text-white">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <ul class="flex flex-col mt-8 space-y-2 px-4">
+            <li>
+                <a href="index.html" class="flex items-center space-x-3 p-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                    <i class="ph ph-house text-xl"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="fleet.html" class="flex items-center space-x-3 p-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                    <i class="ph ph-car-profile text-xl"></i>
+                    <span>Our Fleet</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="flex items-center space-x-3 p-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
+                    <i class="ph ph-info text-xl"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="flex items-center space-x-3 p-3 rounded-lg bg-primary/20 text-primary font-semibold transition-colors">
+                    <i class="ph ph-phone text-xl"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="md:ml-64 min-h-screen pt-12 md:pt-24 pb-24 px-6 max-w-6xl mx-auto">
+        
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-5xl font-extrabold text-white mb-4">Get in <span class="text-gradient">Touch</span></h2>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg">Ready to book your dream ride? Contact us today to reserve your vehicle or ask any questions.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Contact Info -->
+            <div class="space-y-8 fade-in">
+                <div class="glass p-8 rounded-2xl flex items-start space-x-6 hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <i class="ph ph-map-pin text-3xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Our Location</h4>
+                        <p class="text-slate-400">123 Galle Road,<br>Colombo 03, Sri Lanka</p>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-2xl flex items-start space-x-6 hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <i class="ph ph-phone text-3xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Call Us (24/7)</h4>
+                        <p class="text-slate-400">+94 77 123 4567<br>+94 11 234 5678</p>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-2xl flex items-start space-x-6 hover-scale">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <i class="ph ph-envelope text-3xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Email Address</h4>
+                        <p class="text-slate-400">bookings@lankadrive.lk<br>info@lankadrive.lk</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="glass p-8 rounded-2xl border border-slate-700/50 shadow-2xl fade-in">
+                <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-slate-300">First Name</label>
+                            <input type="text" class="w-full bg-dark border border-slate-600 rounded-lg p-3 text-white focus:border-primary focus:outline-none transition-colors" placeholder="John">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-slate-300">Last Name</label>
+                            <input type="text" class="w-full bg-dark border border-slate-600 rounded-lg p-3 text-white focus:border-primary focus:outline-none transition-colors" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-slate-300">Email Address</label>
+                        <input type="email" class="w-full bg-dark border border-slate-600 rounded-lg p-3 text-white focus:border-primary focus:outline-none transition-colors" placeholder="john@example.com">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-slate-300">Message / Booking Details</label>
+                        <textarea rows="4" class="w-full bg-dark border border-slate-600 rounded-lg p-3 text-white focus:border-primary focus:outline-none transition-colors" placeholder="I would like to rent the Nissan Primera for 3 days..."></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-gradient-to-r from-primary to-secondary hover:from-blue-600 hover:to-purple-600 text-white font-bold py-4 rounded-lg transition-all shadow-lg text-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
